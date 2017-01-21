@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
         <variable constant="0" name="AngleOfBullets" sid="957691273373826" static="0" type="number">450</variable>
         <event-group description="" sid="761664919078926" title="Game PLay">
             <sub-events>
@@ -66,6 +67,11 @@
                 <event-block sid="784929040197720">
                     <conditions>
                         <condition id="14" name="On tap" sid="475656194935896" type="Touch" />
+                        <condition id="-14" name="Compare variable" sid="510294727918880" type="System">
+                            <param id="0" name="Variable">Yell_value</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="599332186708525" type="System">
@@ -78,6 +84,47 @@
                             <param id="0" name="X">Touch.X</param>
                             <param id="1" name="Y">Touch.Y</param>
                         </action>
+                        <action id="-11" name="Subtract from" sid="251894176185402" type="System">
+                            <param id="0" name="Variable">Yell_value</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="600927919317577">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="890868326057458" type="Player">
+                            <param id="0" name="Object">Bottle</param>
+                        </condition>
+                        <condition id="0" name="On collision with another object" sid="906791303917255" type="Player">
+                            <param id="0" name="Object">Glass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="268099036731159" type="Player">
+                            <param id="0" name="&apos;On&apos; time">0.25</param>
+                            <param id="1" name="&apos;Off&apos; time">0.25</param>
+                            <param id="2" name="Duration">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="142920225901704">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="416229308772487" type="Wave">
+                            <param id="0" name="Object">Glass</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="809739186960856" type="Glass" />
+                    </actions>
+                </event-block>
+                <event-block sid="603615921487504">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="146805715405329" type="Wave">
+                            <param id="0" name="Object">Bottle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="339796477343333" type="Bottle" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -94,8 +141,8 @@
                         <action id="-3" name="Create object" sid="333246315116879" type="System">
                             <param id="0" name="Object to create">Glass</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0,1080)</param>
-                            <param id="3" name="Y">1900</param>
+                            <param id="2" name="X">random(91,1007)</param>
+                            <param id="3" name="Y">random(1141, 1619)</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="953362801440866" type="Glass">
                             <param id="0" name="Angle">angle(Glass.X,Glass.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
@@ -109,11 +156,11 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="788512190344506" type="System">
+                        <action id="-3" name="Create object" sid="928255694529421" type="System">
                             <param id="0" name="Object to create">Bottle</param>
                             <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(0,1080)</param>
-                            <param id="3" name="Y">1900</param>
+                            <param id="2" name="X">random(91,1007)</param>
+                            <param id="3" name="Y">random(1141, 1619)</param>
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="532034741958600" type="Bottle">
                             <param id="0" name="Angle">angle(Bottle.X,Bottle.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
@@ -122,25 +169,91 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block any="1" sid="142920225901704">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="416229308772487" type="Wave">
-                    <param id="0" name="Object">Glass</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="809739186960856" type="Glass" />
-            </actions>
-        </event-block>
-        <event-block sid="603615921487504">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="146805715405329" type="Wave">
-                    <param id="0" name="Object">Bottle</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="339796477343333" type="Bottle" />
-            </actions>
-        </event-block>
+        <event-group description="" sid="118668186635629" title="Grito">
+            <sub-events>
+                <event-block sid="344778593958091">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="154967950398463" type="System">
+                            <param id="0" name="Interval (seconds)">1.1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="140608171861169" type="System">
+                            <param id="0" name="Variable">Yell_value</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="695531494339613" type="System">
+                            <param id="0" name="Variable">Yell_value</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="997808728910245">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="715113616626370" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="898076585850838">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="795575015979880" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="688187256413328" type="Yell">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="262455237115740">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="284528424899671" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="881525419377090" type="Yell">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="625506640004912">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="333263028739735" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="355982936139249" type="Yell">
+                                    <param id="0" name="Frame number">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="354588260840150">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="546472267322540" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="184502661319989" type="Yell">
+                                    <param id="0" name="Frame number">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
