@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -217,6 +218,60 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617950294544573" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wave" sid="466471745578565">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="635543122203265">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="563890584091935">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547153020248081" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.02" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Glass" sid="297264540736475">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="broken" sid="861621772239282" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="441108870551686">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="845511042375102">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="602103223252558" speed="5">
+                    <frame duration="1" hotspotX="0.04" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bottle" sid="135025453452310">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="broken" sid="656897557171483" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="998918826343701">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="459708626995747">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="697088156960350" speed="5">
+                    <frame duration="1" hotspotX="0.0416667" hotspotY="0.0454545" />
                 </animation>
             </animation-folder>
         </object-type>

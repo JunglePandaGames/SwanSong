@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="AngleOfBullets" sid="957691273373826" static="0" type="number">450</variable>
         <event-group description="" sid="761664919078926" title="Game PLay">
             <sub-events>
                 <event-block sid="117632264323181">
@@ -62,7 +63,84 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="784929040197720">
+                    <conditions>
+                        <condition id="14" name="On tap" sid="475656194935896" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="599332186708525" type="System">
+                            <param id="0" name="Object to create">Wave</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">Player.X</param>
+                            <param id="3" name="Y">Player.Y</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="142136785872585" type="Wave">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="724947865041060" title="Platéia">
+            <sub-events>
+                <event-block sid="867278627355136">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="543606916803546" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="333246315116879" type="System">
+                            <param id="0" name="Object to create">Glass</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(0,1080)</param>
+                            <param id="3" name="Y">1900</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="953362801440866" type="Glass">
+                            <param id="0" name="Angle">angle(Glass.X,Glass.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717199816045089">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="773178134496408" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="788512190344506" type="System">
+                            <param id="0" name="Object to create">Bottle</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">random(0,1080)</param>
+                            <param id="3" name="Y">1900</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="532034741958600" type="Bottle">
+                            <param id="0" name="Angle">angle(Bottle.X,Bottle.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block any="1" sid="142920225901704">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="416229308772487" type="Wave">
+                    <param id="0" name="Object">Glass</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="809739186960856" type="Glass" />
+            </actions>
+        </event-block>
+        <event-block sid="603615921487504">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="146805715405329" type="Wave">
+                    <param id="0" name="Object">Bottle</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="339796477343333" type="Bottle" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
