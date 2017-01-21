@@ -3,155 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu_event</name>
     <events>
-        <event-group description="" sid="711944796715202" title="MenuOpções">
-            <sub-events>
-                <event-block sid="702096931621450">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="550803293514832" type="Keyboard">
-                            <param id="0" name="Key">40 (Down arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="818450141734477" type="Menu">
-                            <param id="0" name="Animation">&quot;menu1&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="417135928828858" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="674694200237894" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="769703763680060" type="Menu">
-                            <param id="0" name="Animation">&quot;menu2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="910156254858550">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="614772620913694" type="Keyboard">
-                            <param id="0" name="Key">40 (Down arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="196135584105014" type="Menu">
-                            <param id="0" name="Animation">&quot;menu2&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="696471422750469" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="999321205165140" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="289536037286268" type="Menu">
-                            <param id="0" name="Animation">&quot;menu3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="502475747503517">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="422880049582408" type="Keyboard">
-                            <param id="0" name="Key">40 (Down arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="269663745841921" type="Menu">
-                            <param id="0" name="Animation">&quot;menu3&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="327642316500548" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="541798044223975" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="732123642501194" type="Menu">
-                            <param id="0" name="Animation">&quot;menu1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="323831980876482">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="905334594062815" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="936525198158301" type="Menu">
-                            <param id="0" name="Animation">&quot;menu1&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="554811472667202" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="186412703992423" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="555016665197394" type="Menu">
-                            <param id="0" name="Animation">&quot;menu3&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="368958375959714">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="639115844942022" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="293682807573274" type="Menu">
-                            <param id="0" name="Animation">&quot;menu2&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="746081364461074" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="710027709684621" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="818122256378048" type="Menu">
-                            <param id="0" name="Animation">&quot;menu1&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="492016669098178">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="391505978285925" type="Keyboard">
-                            <param id="0" name="Key">38 (Up arrow)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="256565941508700" type="Menu">
-                            <param id="0" name="Animation">&quot;menu3&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="891531191164813" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="651425697312557" type="System">
-                            <param id="0" name="Seconds">0.0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="953889514011882" type="Menu">
-                            <param id="0" name="Animation">&quot;menu2&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="328245777270873" title="Start Splash">
+        <event-group description="" sid="328245777270873" title="Start App">
             <sub-events>
                 <event-block sid="441971239232954">
                     <conditions>
@@ -174,71 +26,139 @@
                         <action id="-16" name="Wait" sid="464737230576244" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="228047256945392" type="Menu" />
-                        <action id="-15" name="Set visible" sid="554455064322448" type="Menu">
+                        <action behavior="Fade1" id="1" name="Start fade" sid="228047256945392" type="BtnAll" />
+                        <action id="-15" name="Set visible" sid="554455064322448" type="BtnAll">
                             <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="909546925027508" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="984325562674644" title="Transition of Layout">
+        <event-group description="" sid="984325562674644" title="Menu">
             <sub-events>
-                <event-block sid="442954529281255">
+                <event-block sid="534924601650401">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="634307429382422" type="Keyboard">
-                            <param id="0" name="Key">32 (Space)</param>
-                        </condition>
-                        <condition id="2" name="Is playing" sid="259169196811641" type="Menu">
-                            <param id="0" name="Animation">&quot;menu1&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="764154295218295" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                        <condition id="17" name="On tap object" sid="798760417351762" type="Touch">
+                            <param id="0" name="Object">BtnStart</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="611852748156368" type="System">
+                        <action id="-16" name="Wait" sid="863622166590599" type="System">
                             <param id="0" name="Seconds">0.0</param>
                         </action>
-                        <action id="0" name="Play" sid="359359212160423" type="Audio">
+                        <action id="0" name="Play" sid="120488689076979" type="Audio">
                             <param id="0" name="Audio file">som_botão_pressionado</param>
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
-                        <action behavior="Fade2" id="1" name="Start fade" sid="706721843934989" type="Menu" />
-                        <action id="-10" name="Set value" sid="768338169765278" type="Menu">
-                            <param id="0" name="Instance variable">Activation</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="202725666229765" type="System">
+                        <action behavior="Fade2" id="1" name="Start fade" sid="258697827168139" type="BtnAll" />
+                        <action id="-16" name="Wait" sid="796488318968339" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action behavior="Fade2" id="1" name="Start fade" sid="338824234055619" type="Title" />
-                        <action id="-16" name="Wait" sid="487066244150380" type="System">
+                        <action behavior="Fade2" id="1" name="Start fade" sid="498958930069488" type="Title" />
+                        <action id="-16" name="Wait" sid="566887194973105" type="System">
                             <param id="0" name="Seconds">1.5</param>
                         </action>
-                        <action id="-3" name="Create object" sid="681923348627905" type="System">
+                        <action disabled="1" id="-3" name="Create object" sid="881410802507773" type="System">
                             <param id="0" name="Object to create">Transition2</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="X">-10</param>
                             <param id="3" name="Y">-10</param>
                         </action>
-                        <action id="-16" name="Wait" sid="211636733373171" type="System">
+                        <action disabled="1" id="-16" name="Wait" sid="692202365263029" type="System">
                             <param id="0" name="Seconds">1.0</param>
                         </action>
-                        <action id="33" name="Stop all" sid="847365631262721" type="Audio" />
-                        <action id="-16" name="Wait" sid="629538256433342" type="System">
+                        <action id="33" name="Stop all" sid="764213037293234" type="Audio" />
+                        <action id="-16" name="Wait" sid="605046622739768" type="System">
                             <param id="0" name="Seconds">0.0</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="234119954972742" type="System">
+                        <action id="-2" name="Go to layout" sid="270569471103581" type="System">
                             <param id="0" name="Layout">Game</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="484701583926417">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="559095047523758" type="Touch">
+                            <param id="0" name="Object">BtnCredit</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="555429846267705" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="333646809994763" type="Audio">
+                            <param id="0" name="Audio file">som_botão_pressionado</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade2" id="1" name="Start fade" sid="916349849459940" type="BtnAll" />
+                        <action id="-16" name="Wait" sid="409809729776315" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Fade2" id="1" name="Start fade" sid="135390952601242" type="Title" />
+                        <action id="-16" name="Wait" sid="858348776412400" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="286711193688294" type="System">
+                            <param id="0" name="Object to create">Transition2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-10</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="875054285156967" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="149972994422416" type="Audio" />
+                        <action id="-16" name="Wait" sid="939289042836709" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="641435096792232" type="System">
+                            <param id="0" name="Layout">Credit_Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302008067141003">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="417731836290452" type="Touch">
+                            <param id="0" name="Object">BtnSettings</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="301149839337879" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="422759659018446" type="Audio">
+                            <param id="0" name="Audio file">som_botão_pressionado</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Fade2" id="1" name="Start fade" sid="373796603751651" type="BtnAll" />
+                        <action id="-16" name="Wait" sid="782740061320099" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action behavior="Fade2" id="1" name="Start fade" sid="989113021114635" type="Title" />
+                        <action id="-16" name="Wait" sid="261027208228970" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action disabled="1" id="-3" name="Create object" sid="945930568204532" type="System">
+                            <param id="0" name="Object to create">Transition2</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">-10</param>
+                            <param id="3" name="Y">-10</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="951983860144443" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="882329189970392" type="Audio" />
+                        <action id="-16" name="Wait" sid="975519081039155" type="System">
+                            <param id="0" name="Seconds">0.0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="604521996251007" type="System">
+                            <param id="0" name="Layout">Settings_Layout</param>
                         </action>
                     </actions>
                 </event-block>

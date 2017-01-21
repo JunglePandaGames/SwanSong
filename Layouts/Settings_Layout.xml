@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Splash_Layout</name>
-    <sid>762160424494066</sid>
+    <name>Settings_Layout</name>
+    <sid>609107205152531</sid>
     <event-sheet></event-sheet>
     <size>
         <width>1080</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Transition" sid="676008397721226">
+        <layer name="Layer 0" sid="768905125373507">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>

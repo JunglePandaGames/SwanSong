@@ -51,7 +51,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718825251929941" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gleides\Pictures\Assets_Games\1080x1920_Layout.jpg" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\SwanSong\Assets\menu-02.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -67,7 +67,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214648866669139" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Workspace\ExemploConstruct\Menu inicial\título.png">
+                    <frame duration="1" hotspotX="0.500818" hotspotY="0.500864" original-source="C:\Workspace\SwanSong\Assets\logo.png">
                         <collision-poly>
                             <point x="0.175" y="0.405263" />
                             <point x="0.5" y="0.0578947" />
@@ -190,7 +190,18 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678293705413378" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gleides\Pictures\Assets_Games\1080x1920_Layout3.jpg" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\SwanSong\Assets\cortina2.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.499538" y="0.01576" />
+                            <point x="0.998153" y="0.00101678" />
+                            <point x="1" y="0.499746" />
+                            <point x="0.957525" y="0.976614" />
+                            <point x="0.499538" y="0.992883" />
+                            <point x="0.0470914" y="0.974072" />
+                            <point x="0.00184672" y="0.499746" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -220,17 +231,112 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BtnStart" sid="208446103691909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="622185169061516" speed="5">
+                    <frame duration="1" hotspotX="0.42094" hotspotY="0.5" original-source="C:\Users\Gleides\Pictures\Assets_Games\onscreencontrols\Sprites\transparentDark\transparentDark14.png">
+                        <collision-poly>
+                            <point x="0.0152778" y="0.151496" />
+                            <point x="0.419872" y="0.00213675" />
+                            <point x="0.824466" y="0.151496" />
+                            <point x="0.997863" y="0.5" />
+                            <point x="0.824466" y="0.848504" />
+                            <point x="0.419872" y="0.997863" />
+                            <point x="0.0152778" y="0.848504" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BtnSettings" sid="915069117448508">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860711173281300" speed="5">
+                    <frame duration="1" hotspotX="0.534413" hotspotY="0.516129" original-source="C:\Users\Gleides\Pictures\Assets_Games\onscreencontrols\Sprites\transparentDark\transparentDark20.png">
+                        <collision-poly>
+                            <point x="0.0482456" y="0" />
+                            <point x="0.534413" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.514113" />
+                            <point x="1" y="1" />
+                            <point x="0.534413" y="1" />
+                            <point x="0.0482456" y="1" />
+                            <point x="0.00404858" y="0.514113" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BtnCredit" sid="372071829650412">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="101430215847559" speed="5">
+                    <frame duration="1" hotspotX="0.526316" hotspotY="0.467742" original-source="C:\Users\Gleides\Pictures\Assets_Games\onscreencontrols\Sprites\transparentDark\transparentDark16.png">
+                        <collision-poly>
+                            <point x="0.160121" y="0.0663306" />
+                            <point x="0.524292" y="0" />
+                            <point x="0.888462" y="0.0663306" />
+                            <point x="1" y="0.465726" />
+                            <point x="0.888462" y="0.865121" />
+                            <point x="0.524292" y="1" />
+                            <point x="0.160121" y="0.865121" />
+                            <point x="0.00404858" y="0.465726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BtnAll" sid="636452757084092">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade1" sid="775384927999866">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Fade2" sid="487345826299038">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680513512482986" speed="5">
+                    <frame duration="1" hotspotX="-0.188748" hotspotY="0.5" original-source="C:\Workspace\SwanSong\Assets\Botoes.png">
+                        <collision-poly>
+                            <point x="0" y="0.248927" />
+                            <point x="0" y="0.306867" />
+                            <point x="0.951782" y="0.0493562" />
+                            <point x="1" y="0.5" />
+                            <point x="0.951782" y="0.950644" />
+                            <point x="0" y="0.690987" />
+                            <point x="0" y="0.772532" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="871728449777988">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574646743127753" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Menu_layout.xml</layout>
         <layout>Splash_Layout.xml</layout>
         <layout>Game.xml</layout>
+        <layout>Credit_Layout.xml</layout>
+        <layout>Settings_Layout.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Menu_event.xml</event-sheet>
         <event-sheet>Splash_Event.xml</event-sheet>
         <event-sheet>Game_event.xml</event-sheet>
+        <event-sheet>Credit_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />

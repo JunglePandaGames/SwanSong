@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Splash_Layout</name>
-    <sid>762160424494066</sid>
-    <event-sheet></event-sheet>
+    <name>Credit_Layout</name>
+    <sid>742490893806412</sid>
+    <event-sheet>Credit_Event</event-sheet>
     <size>
         <width>1080</width>
         <height>1920</height>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Transition" sid="676008397721226">
+        <layer name="Layer 0" sid="653943575815636">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
