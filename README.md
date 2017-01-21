@@ -1,10 +1,11 @@
 # SwanSong
 A Prima Done can't handle a crowd anymore
 
-#Team
+Equipe:
 ## Dev
-   - Eberth
-   - Juliana
-   - Gleides
+	- Eberth
+	- Juliana
+	- Gleides
+
 ##Designer
-   - Alan
+	- Alan
