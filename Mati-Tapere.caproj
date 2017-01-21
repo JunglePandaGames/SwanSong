@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>SwanSong</name>
+    <name>Mati-Tapere</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -24,8 +24,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>1080</width>
+        <height>1920</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -50,7 +50,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718825251929941" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\ExemploConstruct\Menu inicial\cenário de fundo.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gleides\Pictures\Assets_Games\1080x1920_Layout.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -173,7 +173,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="854041307458470" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\ExemploConstruct\Menu inicial\tela preta.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gleides\Pictures\Assets_Games\1080x1920_Layout2.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -189,18 +189,19 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="678293705413378" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\ExemploConstruct\Menu inicial\tela preta.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Gleides\Pictures\Assets_Games\1080x1920_Layout3.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Splash_layout.xml</layout>
-        <layout>Other_Layout.xml</layout>
+        <layout>Menu_layout.xml</layout>
+        <layout>Splash_Layout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Splash_event.xml</event-sheet>
+        <event-sheet>Menu_event.xml</event-sheet>
+        <event-sheet>Splash_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
