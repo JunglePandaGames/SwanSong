@@ -8,9 +8,10 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>9mif6n7azddx</unique-id>
-    <saved-with-version>24100</saved-with-version>
+    <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -19,6 +20,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -201,6 +203,9 @@
                 <behavior-type name="Solid" sid="920753338782170">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Timer" sid="737244563230538">
+                    <behavior id="Timer" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837563052339413" speed="5">
@@ -275,6 +280,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="attack" sid="773410872546331">
+            <plugin id="Function" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -309,9 +317,11 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="attack" uid="11" />
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />
+        <file name="Der_Hoelle_Rache.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="música_do_menu.ogg" />

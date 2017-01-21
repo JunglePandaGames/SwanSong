@@ -2,5 +2,16 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Splash_Event</name>
-    <events />
+    <events>
+        <event-block sid="580592043904879">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="250854823792930" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Preload" sid="629175802864306" type="Audio">
+                    <param id="0" name="Audio file">Der_Hoelle_Rache</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
