@@ -18,6 +18,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -193,15 +194,43 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Player" sid="550154225378381">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="920753338782170">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837563052339413" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="center" pingpong="0" repeatcount="1" repeatto="0" sid="163973605076451" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Center" sid="687020604159841">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="617950294544573" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Menu_layout.xml</layout>
         <layout>Splash_Layout.xml</layout>
+        <layout>Game.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Menu_event.xml</event-sheet>
         <event-sheet>Splash_Event.xml</event-sheet>
+        <event-sheet>Game_event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
