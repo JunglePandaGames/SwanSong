@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="NoteSpeed" sid="306098714184597" static="0" type="number">0.3</variable>
         <variable constant="0" name="Score" sid="703018531519220" static="0" type="number">0</variable>
         <variable constant="0" name="Life" sid="186956783734137" static="0" type="number">3</variable>
         <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
@@ -338,5 +339,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="594659175341409" title="SoundEffects" />
     </events>
 </c2eventsheet>
