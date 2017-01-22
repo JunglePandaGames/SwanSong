@@ -11,6 +11,7 @@
     <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -657,6 +658,9 @@
                     </frame>
                 </animation>
             </animation-folder>
+		</object-type>
+        <object-type name="SoundFx" sid="428631243991105">
+            <plugin id="Function" />
         </object-type>
     </object-folder>
     <families />
@@ -695,12 +699,16 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="SoundFx" uid="28" />
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />
+        <file name="screams.ogg" />
+        <file name="snap2.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="música_do_menu.ogg" />
+        <file name="Der_Hoelle_Rache.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
