@@ -4,6 +4,7 @@
     <name>Game_event</name>
     <events>
         <variable constant="0" name="NoteSpeed" sid="306098714184597" static="0" type="number">0.3</variable>
+        <variable constant="0" name="HighScore" sid="794937791679057" static="0" type="number">0</variable>
         <variable constant="0" name="Score" sid="703018531519220" static="0" type="number">0</variable>
         <variable constant="0" name="Life" sid="186956783734137" static="0" type="number">3</variable>
         <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
@@ -24,89 +25,40 @@
                         <action id="5" name="Set frame" sid="317700041611816" type="Life3">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="5" name="Check item exists" sid="177377856604119" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583330710367245">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="727098155954145" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="516420801559177" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="518040493542457">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="544635370502993" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="106453289802675" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="761664919078926" title="Game PLay">
             <sub-events>
-                <event-block sid="117632264323181">
-                    <conditions>
-                        <condition id="4" name="Is touching object" sid="449856964017613" type="Touch">
-                            <param id="0" name="Object">Center</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="182431885924556" type="Player">
-                            <param id="0" name="Animation">&quot;center&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="774033832801610">
-                    <conditions>
-                        <condition id="14" name="On tap" sid="289313951019941" type="Touch" />
-                        <condition id="4" inverted="1" name="Is touching object" sid="814567707997204" type="Touch">
-                            <param id="0" name="Object">Center</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="368005599627952" type="System">
-                            <param id="0" name="First value">Touch.X</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="953023939823787" type="Player">
-                            <param id="0" name="Animation">&quot;right&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="564961962723995">
-                    <conditions>
-                        <condition id="14" name="On tap" sid="926181539085093" type="Touch" />
-                        <condition id="4" inverted="1" name="Is touching object" sid="753126247267611" type="Touch">
-                            <param id="0" name="Object">Center</param>
-                        </condition>
-                        <condition id="-8" name="Compare two values" sid="368854051330508" type="System">
-                            <param id="0" name="First value">Touch.X</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="202159607192540" type="Player">
-                            <param id="0" name="Animation">&quot;left&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="784929040197720">
-                    <conditions>
-                        <condition id="14" name="On tap" sid="475656194935896" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="510294727918880" type="System">
-                            <param id="0" name="Variable">Yell_value</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="599332186708525" type="System">
-                            <param id="0" name="Object to create">Wave</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">Player.X</param>
-                            <param id="3" name="Y">Player.Y</param>
-                        </action>
-                        <action id="-22" name="Set angle toward position" sid="142136785872585" type="Wave">
-                            <param id="0" name="X">Touch.X</param>
-                            <param id="1" name="Y">Touch.Y</param>
-                        </action>
-                        <action id="-11" name="Subtract from" sid="251894176185402" type="System">
-                            <param id="0" name="Variable">Yell_value</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block any="1" sid="600927919317577">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="890868326057458" type="Player">
@@ -205,34 +157,129 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="858982714300267">
+                <event-block sid="916494251268444">
                     <conditions>
-                        <condition id="-14" name="Compare variable" sid="871330369802185" type="System">
+                        <condition id="-14" name="Compare variable" sid="944661222664274" type="System">
                             <param id="0" name="Variable">Life</param>
-                            <param id="1" name="Comparison">0</param>
+                            <param id="1" name="Comparison">4</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action disabled="1" id="-21" name="Reset global variables" sid="939399666574974" type="System" />
-                        <action id="-9" name="Destroy" sid="186880638351059" type="Life1" />
-                        <action id="-9" name="Destroy" sid="876757431981048" type="Life2" />
-                        <action id="-9" name="Destroy" sid="289495611784502" type="Life3" />
-                        <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
-                        <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
-                            <param id="0" name="X">546</param>
-                            <param id="1" name="Y">490</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="117632264323181">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="449856964017613" type="Touch">
+                                    <param id="0" name="Object">Center</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="182431885924556" type="Player">
+                                    <param id="0" name="Animation">&quot;center&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="774033832801610">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="289313951019941" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="814567707997204" type="Touch">
+                                    <param id="0" name="Object">Center</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="368005599627952" type="System">
+                                    <param id="0" name="First value">Touch.X</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="953023939823787" type="Player">
+                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="564961962723995">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="926181539085093" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="753126247267611" type="Touch">
+                                    <param id="0" name="Object">Center</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="368854051330508" type="System">
+                                    <param id="0" name="First value">Touch.X</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="202159607192540" type="Player">
+                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="784929040197720">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="475656194935896" type="Touch" />
+                                <condition id="-14" name="Compare variable" sid="510294727918880" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="599332186708525" type="System">
+                                    <param id="0" name="Object to create">Wave</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">Player.X</param>
+                                    <param id="3" name="Y">Player.Y</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="142136785872585" type="Wave">
+                                    <param id="0" name="X">Touch.X</param>
+                                    <param id="1" name="Y">Touch.Y</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="251894176185402" type="System">
+                                    <param id="0" name="Variable">Yell_value</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="724947865041060" title="Platéia">
             <sub-events>
+                <event-block sid="656317998161137">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="220269243661297" type="System">
+                            <param id="0" name="Interval (seconds)">15</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="925105285600491" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="103783746455273" type="System">
+                            <param id="0" name="Object to create">Garçom</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1025</param>
+                            <param id="3" name="Y">1178</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="553662924327734">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="522655281313512" type="Garçom">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="630668625981558" type="Garçom" />
+                    </actions>
+                </event-block>
                 <event-block sid="249864315045738">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="231684895139011" type="System">
@@ -407,6 +454,76 @@
                 <action id="-26" name="Restart layout" sid="810083997634869" type="System" />
             </actions>
         </event-block>
-		<event-group description="" sid="594659175341409" title="SoundEffects" />
+        <event-block sid="171547919211025">
+            <conditions>
+                <condition id="17" name="On tap object" sid="385084821601882" type="Touch">
+                    <param id="0" name="Object">btnHome</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="629757529547302" type="System">
+                    <param id="0" name="Layout">Home_layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="907240356141706" title="Game Over">
+            <sub-events>
+                <event-block sid="821824112341137">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="287995756974584" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="888340466606334" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                        <action id="0" name="Set item" sid="962828127218619" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858982714300267">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="871330369802185" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-21" name="Reset global variables" sid="939399666574974" type="System" />
+                        <action id="-9" name="Destroy" sid="186880638351059" type="Life1" />
+                        <action id="-9" name="Destroy" sid="876757431981048" type="Life2" />
+                        <action id="-9" name="Destroy" sid="289495611784502" type="Life3" />
+                        <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
+                        <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
+                            <param id="0" name="X">546</param>
+                            <param id="1" name="Y">490</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="218583520102059" type="HighScore">
+                            <param id="0" name="X">374</param>
+                            <param id="1" name="Y">1055</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="767848152645103" type="FontHighScore">
+                            <param id="0" name="X">593</param>
+                            <param id="1" name="Y">1031</param>
+                        </action>
+                        <action id="0" name="Set text" sid="478286552598505" type="FontHighScore">
+                            <param id="0" name="Text">HighScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="594659175341409" title="SoundEffects" />
     </events>
 </c2eventsheet>
