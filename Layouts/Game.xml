@@ -451,7 +451,7 @@
                 <instance type="FontScore" uid="20">
                     <properties>
                         <character-width>36</character-width>
-                        <character-height>57</character-height>
+                        <character-height>38</character-height>
                         <character-set>0123456789</character-set>
                         <text>0</text>
                         <scale>1</scale>
@@ -591,7 +591,7 @@
                 <instance type="FontHighScore" uid="26">
                     <properties>
                         <character-width>36</character-width>
-                        <character-height>57</character-height>
+                        <character-height>38</character-height>
                         <character-set>0123456789</character-set>
                         <text>0</text>
                         <scale>1</scale>

@@ -624,7 +624,7 @@
         </object-type>
         <object-type name="FontScore" sid="773562794421336">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\numeros2-01.png" />
+            <texture original-source="C:\Users\Juliana\Desktop\numeros2-01.png" />
         </object-type>
         <object-type name="Score" sid="349962118261161">
             <plugin id="Sprite" />
@@ -730,7 +730,7 @@
         </object-type>
         <object-type name="FontHighScore" sid="361105179243197">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\numeros2-01.png" />
+            <texture original-source="C:\Users\Juliana\Desktop\numeros2-01.png" />
         </object-type>
         <object-type name="Garçom" sid="421208263126655">
             <plugin id="Sprite" />
