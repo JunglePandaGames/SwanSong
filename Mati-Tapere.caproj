@@ -644,23 +644,26 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760554565410913" speed="5">
-                    <frame duration="1" hotspotX="0.500873" hotspotY="0.501217" original-source="C:\Users\Gleides\Pictures\Assets_Games\Assets\config.png">
-                        <collision-poly>
-                            <point x="0.061082" y="0.0851582" />
-                            <point x="0.499127" y="0.0340633" />
-                            <point x="0.975567" y="0.0340633" />
-                            <point x="0.239092" y="0.498783" />
-                            <point x="0.382199" y="0.138686" />
-                            <point x="0.499127" y="0.136253" />
-                            <point x="0.0122164" y="0.982968" />
-                            <point x="0.008726" y="0.498783" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.471136" hotspotY="1.04478" />
                 </animation>
             </animation-folder>
-		</object-type>
+        </object-type>
         <object-type name="SoundFx" sid="428631243991105">
             <plugin id="Function" />
+        </object-type>
+        <object-type name="BtnMute" sid="708864613385838">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="MuteSound" sid="490573462416564" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="on" pingpong="0" repeatcount="1" repeatto="0" sid="783982030187272" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+                <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="781999532374334" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
@@ -676,6 +679,7 @@
         <event-sheet>Splash_Event.xml</event-sheet>
         <event-sheet>Game_event.xml</event-sheet>
         <event-sheet>Credit_Event.xml</event-sheet>
+        <event-sheet>Settigns_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="24" />
@@ -699,7 +703,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="SoundFx" uid="28" />
+        <global-instance type="SoundFx" uid="30" />
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />

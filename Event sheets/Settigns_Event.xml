@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Settigns_Event</name>
+    <events>
+        <variable constant="0" name="Muted" sid="236288064431292" static="0" type="number">0</variable>
+        <event-block any="1" sid="132019206253138">
+            <conditions>
+                <condition id="17" name="On tap object" sid="887695330090713" type="Touch">
+                    <param id="0" name="Object">BtnMute</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="638363165824057">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="567173776031151" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="853467515884515" type="BtnMute">
+                            <param id="0" name="Animation">&quot;off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="8" name="Set silent" sid="213684789928221" type="Audio">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="755402679984525" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="356370103651468">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="773060040149422" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="474059235817363" type="BtnMute">
+                            <param id="0" name="Animation">&quot;on&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="167564144936883" type="Audio">
+                            <param id="0" name="Audio file">Der_Hoelle_Rache</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="240682424306187" type="System">
+                            <param id="0" name="Variable">Muted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="102220118396080">
+                    <conditions />
+                    <actions>
+                        <action id="5" name="Set frame" sid="771557929541024" type="BtnMute">
+                            <param id="0" name="Frame number">Muted</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="415417899059358">
+            <conditions>
+                <condition id="17" name="On tap object" sid="428675582661378" type="Touch">
+                    <param id="0" name="Object">BtnBackHome</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="367242738977256" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="883018706352167" type="Audio">
+                    <param id="0" name="Audio file">snap2</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Fade2" id="1" name="Start fade" sid="255178999330938" type="TxtCredit" />
+                <action disabled="1" id="-16" name="Wait" sid="175871398995958" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-3" name="Create object" sid="669795471083201" type="System">
+                    <param id="0" name="Object to create">Transition</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">-10</param>
+                    <param id="3" name="Y">-10</param>
+                </action>
+                <action id="-16" name="Wait" sid="185176190066670" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="33" name="Stop all" sid="722999285925152" type="Audio" />
+                <action id="-16" name="Wait" sid="142484442121217" type="System">
+                    <param id="0" name="Seconds">0.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="149468339476463" type="System">
+                    <param id="0" name="Layout">Home_layout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

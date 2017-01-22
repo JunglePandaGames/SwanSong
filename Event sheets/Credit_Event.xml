@@ -14,7 +14,7 @@
                     <param id="0" name="Seconds">1.0</param>
                 </action>
                 <action id="0" name="Play" sid="562915532181222" type="Audio">
-                    <param id="0" name="Audio file">som_botão_pressionado</param>
+                    <param id="0" name="Audio file">snap2</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
