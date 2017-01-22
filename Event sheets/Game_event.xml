@@ -182,6 +182,9 @@
                             <param id="0" name="Variable">Score</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Set text" sid="840236925665150" type="FontScore">
+                            <param id="0" name="Text">Score</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="603615921487504">
@@ -196,6 +199,9 @@
                             <param id="0" name="Variable">Score</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Set text" sid="765227193509313" type="FontScore">
+                            <param id="0" name="Text">Score</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="858982714300267">
@@ -207,9 +213,18 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-21" name="Reset global variables" sid="939399666574974" type="System" />
-                        <action id="-2" name="Go to layout" sid="875175912313838" type="System">
-                            <param id="0" name="Layout">Menu_layout</param>
+                        <action disabled="1" id="-21" name="Reset global variables" sid="939399666574974" type="System" />
+                        <action id="-9" name="Destroy" sid="186880638351059" type="Life1" />
+                        <action id="-9" name="Destroy" sid="876757431981048" type="Life2" />
+                        <action id="-9" name="Destroy" sid="289495611784502" type="Life3" />
+                        <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
+                        <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
+                            <param id="0" name="X">546</param>
+                            <param id="1" name="Y">572</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -217,41 +232,53 @@
         </event-group>
         <event-group description="" sid="724947865041060" title="Platéia">
             <sub-events>
-                <event-block sid="867278627355136">
+                <event-block sid="249864315045738">
                     <conditions>
-                        <condition id="-6" name="Every X seconds" sid="543606916803546" type="System">
-                            <param id="0" name="Interval (seconds)">1</param>
+                        <condition id="-14" name="Compare variable" sid="231684895139011" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="333246315116879" type="System">
-                            <param id="0" name="Object to create">Glass</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(91,1007)</param>
-                            <param id="3" name="Y">random(1141, 1619)</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="953362801440866" type="Glass">
-                            <param id="0" name="Angle">angle(Glass.X,Glass.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="717199816045089">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="773178134496408" type="System">
-                            <param id="0" name="Interval (seconds)">1.5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="928255694529421" type="System">
-                            <param id="0" name="Object to create">Bottle</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="X">random(91,1007)</param>
-                            <param id="3" name="Y">random(1141, 1619)</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="532034741958600" type="Bottle">
-                            <param id="0" name="Angle">angle(Bottle.X,Bottle.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="867278627355136">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="543606916803546" type="System">
+                                    <param id="0" name="Interval (seconds)">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="333246315116879" type="System">
+                                    <param id="0" name="Object to create">Glass</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(91,1007)</param>
+                                    <param id="3" name="Y">random(1141, 1619)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="953362801440866" type="Glass">
+                                    <param id="0" name="Angle">angle(Glass.X,Glass.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="717199816045089">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="773178134496408" type="System">
+                                    <param id="0" name="Interval (seconds)">1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="928255694529421" type="System">
+                                    <param id="0" name="Object to create">Bottle</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="X">random(91,1007)</param>
+                                    <param id="3" name="Y">random(1141, 1619)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="532034741958600" type="Bottle">
+                                    <param id="0" name="Angle">angle(Bottle.X,Bottle.Y, random(Player.X-AngleOfBullets,Player.X+AngleOfBullets), Player.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -341,5 +368,43 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="199996193644770">
+            <conditions>
+                <condition id="4" name="On finished" sid="574791656685476" type="GameOverAnimation">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="204311760200063" type="System">
+                    <param id="0" name="Variable">Life</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="408369085864430" type="GameOverAnimation" />
+                <action id="-3" name="Set position" sid="769461541075797" type="GameOverSprite">
+                    <param id="0" name="X">550</param>
+                    <param id="1" name="Y">587</param>
+                </action>
+                <action id="-3" name="Set position" sid="903404462043381" type="btnRestart">
+                    <param id="0" name="X">462.5</param>
+                    <param id="1" name="Y">796</param>
+                </action>
+                <action id="-3" name="Set position" sid="779983453186061" type="btnHome">
+                    <param id="0" name="X">611.5</param>
+                    <param id="1" name="Y">791.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="702529102781788">
+            <conditions>
+                <condition id="17" name="On tap object" sid="494306971569416" type="Touch">
+                    <param id="0" name="Object">btnRestart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="479140123702588" type="System" />
+                <action id="-26" name="Restart layout" sid="810083997634869" type="System" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
