@@ -14,6 +14,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -464,6 +465,26 @@
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248054775794197" speed="5">
                     <frame duration="1" hotspotX="0.442424" hotspotY="0.643275" />
                     <frame duration="1" hotspotX="0.492647" hotspotY="0.68" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\barras.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FontScore" sid="773562794421336">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\numeros2.png" />
+        </object-type>
+        <object-type name="Score" sid="349962118261161">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993131222441034" speed="5">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.954545" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\score.png">
+                        <collision-poly>
+                            <point x="0.050505" y="0.0909091" />
+                            <point x="0.939394" y="0.136364" />
+                            <point x="0.757576" y="0.909091" />
+                            <point x="0.494949" y="0.863636" />
+                            <point x="0.242424" y="0.909091" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

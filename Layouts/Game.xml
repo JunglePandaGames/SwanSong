@@ -15,7 +15,7 @@
     <layers>
         <layer name="BackGround" sid="300428488994507">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>0,0,0</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -383,6 +383,58 @@
                         <depth>0</depth>
                         <hotspotX>0.442424238</hotspotX>
                         <hotspotY>0.643274844</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FontScore" uid="20">
+                    <properties>
+                        <character-width>50</character-width>
+                        <character-height>57</character-height>
+                        <character-set>0123456789</character-set>
+                        <text>0</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>703.5</x>
+                        <y>999</y>
+                        <z>0</z>
+                        <width>305</width>
+                        <height>61</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Score" uid="21">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>451.575805664</x>
+                        <y>1030.363647461</y>
+                        <z>0</z>
+                        <width>163</width>
+                        <height>71</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50505048</hotspotX>
+                        <hotspotY>0.954545438</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

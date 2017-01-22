@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="Score" sid="703018531519220" static="0" type="number">0</variable>
         <variable constant="0" name="Life" sid="186956783734137" static="0" type="number">3</variable>
         <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
         <variable constant="0" name="AngleOfBullets" sid="957691273373826" static="0" type="number">450</variable>
@@ -177,6 +178,10 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="809739186960856" type="Glass" />
+                        <action id="-10" name="Add to" sid="154756757475447" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="603615921487504">
@@ -187,6 +192,10 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="339796477343333" type="Bottle" />
+                        <action id="-10" name="Add to" sid="197415267954487" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="858982714300267">
