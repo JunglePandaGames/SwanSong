@@ -8,12 +8,13 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>9mif6n7azddx</unique-id>
-    <saved-with-version>24100</saved-with-version>
+    <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors>
@@ -47,7 +48,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Background" sid="513534495682923">
+        <object-type name="BgHome" sid="513534495682923">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="718825251929941" speed="5">
@@ -315,25 +316,72 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="871728449777988">
+        <object-type name="BtnBackHome" sid="871728449777988">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574646743127753" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5125" hotspotY="0.5125" original-source="C:\Users\Gleides\Pictures\Assets_Games\onscreencontrols\Sprites\transparentDark\transparentDark43.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="534348550936632">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TxtCredit" sid="357440585836909">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade1" sid="323749311384314">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="Fade2" sid="385532719450333">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="929970371042621" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500362" original-source="C:\Workspace\SwanSong\Assets\creditos.png">
+                        <collision-poly>
+                            <point x="0.464373" y="0.273319" />
+                            <point x="0.5" y="0.000723066" />
+                            <point x="0.689189" y="0.182936" />
+                            <point x="0.97543" y="0.985539" />
+                            <point x="0.5" y="1" />
+                            <point x="0.02457" y="0.985539" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BgCreditSettins" sid="397002504269252">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631247000023093" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Workspace\SwanSong\Assets\credit-sett-01-01.png" />
                 </animation>
             </animation-folder>
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Menu_layout.xml</layout>
+        <layout>Home_layout.xml</layout>
         <layout>Splash_Layout.xml</layout>
         <layout>Game.xml</layout>
         <layout>Credit_Layout.xml</layout>
         <layout>Settings_Layout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Menu_event.xml</event-sheet>
+        <event-sheet>Home_event.xml</event-sheet>
         <event-sheet>Splash_Event.xml</event-sheet>
         <event-sheet>Game_event.xml</event-sheet>
         <event-sheet>Credit_Event.xml</event-sheet>

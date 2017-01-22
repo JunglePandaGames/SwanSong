@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Menu_layout</name>
+    <name>Home_layout</name>
     <sid>821841710395787</sid>
-    <event-sheet>Menu_event</event-sheet>
+    <event-sheet>Home_event</event-sheet>
     <size>
         <width>1080</width>
         <height>1920</height>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Background" uid="0">
+                <instance type="BgHome" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
