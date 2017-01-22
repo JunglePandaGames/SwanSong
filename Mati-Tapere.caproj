@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>9mif6n7azddx</unique-id>
-    <saved-with-version>24100</saved-with-version>
+    <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -209,13 +210,44 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="837563052339413" speed="5">
-                    <frame duration="1" hotspotX="0.477273" hotspotY="0.34" />
-                    <frame duration="1" hotspotX="0.477273" hotspotY="0.34" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.34" />
-                </animation>
                 <animation framecount="1" loop="0" name="center" pingpong="0" repeatcount="1" repeatto="0" sid="163973605076451" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.521951" hotspotY="0.348901" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\cantora.png">
+                        <collision-poly>
+                            <point x="0.263415" y="0.148352" />
+                            <point x="0.497561" y="0.00824176" />
+                            <point x="0.82439" y="0.0989011" />
+                            <point x="0.780488" y="0.5" />
+                            <point x="0.990244" y="0.956044" />
+                            <point x="0.0341463" y="0.947802" />
+                            <point x="0.268293" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="left" pingpong="0" repeatcount="1" repeatto="0" sid="947430969871826" speed="5">
+                    <frame duration="1" hotspotX="0.482927" hotspotY="0.351648" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\cantora.png">
+                        <collision-poly>
+                            <point x="0.263415" y="0.148352" />
+                            <point x="0.497561" y="0.00824176" />
+                            <point x="0.82439" y="0.0989011" />
+                            <point x="0.780488" y="0.5" />
+                            <point x="1" y="0.950549" />
+                            <point x="0.00975611" y="0.947802" />
+                            <point x="0.268293" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="right" pingpong="0" repeatcount="1" repeatto="0" sid="110365896205943" speed="5">
+                    <frame duration="1" hotspotX="0.55122" hotspotY="0.347107" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\cantora.png">
+                        <collision-poly>
+                            <point x="0.258537" y="0.146006" />
+                            <point x="0.497561" y="0.00550964" />
+                            <point x="0.829268" y="0.0964187" />
+                            <point x="0.780488" y="0.498623" />
+                            <point x="1" y="0.947658" />
+                            <point x="0" y="0.947658" />
+                            <point x="0.268293" y="0.498623" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -236,10 +268,27 @@
                 <behavior-type name="Bullet" sid="563890584091935">
                     <behavior id="Bullet" />
                 </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="168173279315461">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="645486716706282">
+                    <behavior id="Fade" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547153020248081" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.02" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.474453" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\grito2.png">
+                        <collision-poly>
+                            <point x="0" y="0.708029" />
+                            <point x="0.0833333" y="0.50365" />
+                            <point x="0" y="0.321168" />
+                            <point x="0.611111" y="1.19209e-007" />
+                            <point x="0.902778" y="0.211679" />
+                            <point x="1" y="0.50365" />
+                            <point x="0.916667" y="0.744526" />
+                            <point x="0.611111" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -343,7 +392,15 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736075510306974" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.489933">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.47619" hotspotY="0.553191">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -351,7 +408,7 @@
                             <point x="0" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.380952" hotspotY="0.526316">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -359,7 +416,7 @@
                             <point x="0" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.428571" hotspotY="0.657895">
                         <collision-poly>
                             <point x="1" y="0" />
                             <point x="1" y="1" />
@@ -367,22 +424,6 @@
                             <point x="0" y="0" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite" sid="339943291564636">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="564908060762325" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -391,6 +432,38 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199683558420389" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Life1" sid="583373204352263">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="579353885468364">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="0" repeatto="0" sid="997804604164034" speed="5">
+                    <frame duration="1" hotspotX="0.442424" hotspotY="0.660819" />
+                    <frame duration="1" hotspotX="0.485294" hotspotY="0.693333" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\barras.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Life2" sid="446641425376002">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="865137697920084" speed="5">
+                    <frame duration="1" hotspotX="0.442424" hotspotY="0.660819" />
+                    <frame duration="1" hotspotX="0.485294" hotspotY="0.686667" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\barras.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Life3" sid="510211571028991">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="248054775794197" speed="5">
+                    <frame duration="1" hotspotX="0.442424" hotspotY="0.643275" />
+                    <frame duration="1" hotspotX="0.492647" hotspotY="0.68" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\barras.png" />
                 </animation>
             </animation-folder>
         </object-type>

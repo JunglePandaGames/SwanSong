@@ -108,14 +108,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>540</x>
-                        <y>596</y>
+                        <x>557</x>
+                        <y>419</y>
                         <z>0</z>
-                        <width>93.5</width>
-                        <height>111.71875</height>
+                        <width>250</width>
+                        <height>450</height>
                         <depth>0</depth>
-                        <hotspotX>0.477272719</hotspotX>
-                        <hotspotY>0.340000004</hotspotY>
+                        <hotspotX>0.521951199</hotspotX>
+                        <hotspotY>0.348901093</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -143,19 +143,29 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>2</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1248</x>
-                        <y>282</y>
+                        <x>1272</x>
+                        <y>460</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>50</height>
+                        <width>97</width>
+                        <height>197</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0.02</hotspotY>
-                        <angle>1.595525265</angle>
+                        <hotspotY>0.474452555</hotspotY>
+                        <angle>1.589868903</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -296,14 +306,83 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>527</x>
-                        <y>55</y>
+                        <x>141</x>
+                        <y>555</y>
                         <z>0</z>
-                        <width>-234</width>
-                        <height>39</height>
+                        <width>-49.13999939</width>
+                        <height>250</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.476190478</hotspotX>
+                        <hotspotY>0.489932895</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Life1" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>366</x>
+                        <y>76</y>
+                        <z>0</z>
+                        <width>117.683822632</width>
+                        <height>106.019996643</height>
+                        <depth>0</depth>
+                        <hotspotX>0.442424238</hotspotX>
+                        <hotspotY>0.660818696</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Life2" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>480</x>
+                        <y>76</y>
+                        <z>0</z>
+                        <width>117.683822632</width>
+                        <height>106.019996643</height>
+                        <depth>0</depth>
+                        <hotspotX>0.442424238</hotspotX>
+                        <hotspotY>0.660818696</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Life3" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>600</x>
+                        <y>76</y>
+                        <z>0</z>
+                        <width>117.683822632</width>
+                        <height>106.019996643</height>
+                        <depth>0</depth>
+                        <hotspotX>0.442424238</hotspotX>
+                        <hotspotY>0.643274844</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

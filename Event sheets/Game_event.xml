@@ -3,8 +3,29 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="Life" sid="186956783734137" static="0" type="number">3</variable>
         <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
         <variable constant="0" name="AngleOfBullets" sid="957691273373826" static="0" type="number">450</variable>
+        <event-group description="" sid="488433534216918" title="Start">
+            <sub-events>
+                <event-block sid="379375687476027">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="726898652979050" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="233804245649814" type="Life1">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="205693408184827" type="Life2">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="317700041611816" type="Life3">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="761664919078926" title="Game PLay">
             <sub-events>
                 <event-block sid="117632264323181">
@@ -34,11 +55,8 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="953023939823787" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="0" name="Animation">&quot;right&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="901893246383393" type="Player">
-                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -56,11 +74,8 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="202159607192540" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="0" name="Animation">&quot;left&quot;</param>
                             <param id="1" name="From">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="971437590355941" type="Player">
-                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -103,9 +118,56 @@
                         <action behavior="Flash" id="0" name="Flash" sid="268099036731159" type="Player">
                             <param id="0" name="&apos;On&apos; time">0.25</param>
                             <param id="1" name="&apos;Off&apos; time">0.25</param>
-                            <param id="2" name="Duration">1</param>
+                            <param id="2" name="Duration">1.5</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="991009551242683" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="975179045643342">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="708452788182593" type="Life1">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="120053679864082" type="Life1">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="306082770876199">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="472532291024771" type="System" />
+                                <condition id="3" name="Compare frame" sid="164388316991225" type="Life2">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="708020116533740" type="Life2">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="361532465246731">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="900807181685957" type="System" />
+                                <condition id="3" name="Compare frame" sid="971975179147543" type="Life3">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="277261498708932" type="Life3">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block any="1" sid="142920225901704">
                     <conditions>
@@ -125,6 +187,21 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="339796477343333" type="Bottle" />
+                    </actions>
+                </event-block>
+                <event-block sid="858982714300267">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="871330369802185" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="939399666574974" type="System" />
+                        <action id="-2" name="Go to layout" sid="875175912313838" type="System">
+                            <param id="0" name="Layout">Menu_layout</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
