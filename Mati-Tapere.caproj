@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
@@ -26,6 +27,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -623,7 +625,7 @@
         </object-type>
         <object-type name="FontScore" sid="773562794421336">
             <plugin id="Spritefont2" />
-            <texture original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\numeros2.png" />
+            <texture original-source="C:\Users\Juliana\Desktop\numeros2-01.png" />
         </object-type>
         <object-type name="Score" sid="349962118261161">
             <plugin id="Sprite" />
@@ -689,6 +691,169 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="GameOverAnimation" sid="367023988473021">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407281039911730" speed="3">
+                    <frame duration="1" hotspotX="0.526829" hotspotY="0.604396" />
+                    <frame duration="1" hotspotX="0.524272" hotspotY="0.547264" />
+                    <frame duration="1" hotspotX="0.330969" hotspotY="-0.0480769" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverSprite" sid="714215973767732">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="732743929339964" speed="5">
+                    <frame duration="1" hotspotX="0.50655" hotspotY="0.50087" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\gameover.png">
+                        <collision-poly>
+                            <point x="0.262009" y="0.208696" />
+                            <point x="0.50655" y="0.208696" />
+                            <point x="0.941048" y="0.0573913" />
+                            <point x="0.984716" y="0.49913" />
+                            <point x="0.965065" y="0.961739" />
+                            <point x="0.50655" y="0.998261" />
+                            <point x="0.0327511" y="0.973913" />
+                            <point x="0.00218341" y="0.49913" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnRestart" sid="304975632956334">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="219739769442116" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btnHome" sid="809222620649453">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336596117804695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LocalStorage" sid="612324217597892">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="HighScore" sid="240455950360569">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457137582210137" speed="5">
+                    <frame duration="1" hotspotX="0.487374" hotspotY="0.458333" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\high.png">
+                        <collision-poly>
+                            <point x="0.0151515" y="0.0625" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.972222" y="0.166667" />
+                            <point x="0.866162" y="0.958333" />
+                            <point x="0.133838" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FontHighScore" sid="361105179243197">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Juliana\Desktop\numeros2-01.png" />
+        </object-type>
+        <object-type name="Garçom" sid="421208263126655">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="141491805082235">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="763724563465550">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679521407502534" speed="4.5">
+                    <frame duration="1" hotspotX="0.406077" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335968">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335968">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.405995" hotspotY="0.0335968">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335968">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.406504" hotspotY="0.0335306">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -706,14 +871,14 @@
         <event-sheet>Settigns_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="24" />
-        <global-instance type="Touch" uid="25">
+        <global-instance type="Keyboard" uid="33" />
+        <global-instance type="Touch" uid="34">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Mouse" uid="26" />
-        <global-instance type="Audio" uid="27">
+        <global-instance type="Mouse" uid="35" />
+        <global-instance type="Audio" uid="36">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -727,7 +892,8 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="SoundFx" uid="30" />
+        <global-instance type="SoundFx" uid="37" />
+        <global-instance type="LocalStorage" uid="38" />
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />
