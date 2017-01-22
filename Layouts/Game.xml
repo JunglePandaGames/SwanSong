@@ -451,7 +451,7 @@
                 <instance type="FontScore" uid="20">
                     <properties>
                         <character-width>36</character-width>
-                        <character-height>38</character-height>
+                        <character-height>57</character-height>
                         <character-set>0123456789</character-set>
                         <text>0</text>
                         <scale>1</scale>
@@ -510,8 +510,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>550</x>
-                        <y>587</y>
+                        <x>2085</x>
+                        <y>318</y>
                         <z>0</z>
                         <width>458</width>
                         <height>575</height>
@@ -591,7 +591,7 @@
                 <instance type="FontHighScore" uid="26">
                     <properties>
                         <character-width>36</character-width>
-                        <character-height>38</character-height>
+                        <character-height>57</character-height>
                         <character-set>0123456789</character-set>
                         <text>0</text>
                         <scale>1</scale>

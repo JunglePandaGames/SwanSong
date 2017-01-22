@@ -28,6 +28,7 @@
                         <action id="5" name="Check item exists" sid="177377856604119" type="LocalStorage">
                             <param id="0" name="Key">&quot;highscore_key&quot;</param>
                         </action>
+                        <action id="-21" name="Reset global variables" sid="263846027172149" type="System" />
                     </actions>
                 </event-block>
                 <event-block sid="583330710367245">
