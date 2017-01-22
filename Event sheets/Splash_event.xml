@@ -2,5 +2,18 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Splash_Event</name>
-    <events />
+    <events>
+        <event-block sid="891764425062239">
+            <conditions>
+                <condition id="4" name="On finished" sid="826162725241620" type="Splash1">
+                    <param id="0" name="Animation">&quot;splash1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="529496838514372" type="System">
+                    <param id="0" name="Layout">Home_layout</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

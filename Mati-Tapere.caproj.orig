@@ -690,6 +690,12 @@
                     </frame>
                 </animation>
             </animation-folder>
+<<<<<<< HEAD
+=======
+        </object-type>
+        <object-type name="SoundFx" sid="428631243991105">
+            <plugin id="Function" />
+>>>>>>> cd7171e011c3c0731edf77f8fb2ea2ecd3aa0641
         </object-type>
         <object-type name="GameOverAnimation" sid="367023988473021">
             <plugin id="Sprite" />
@@ -854,27 +860,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Splash1" sid="210903548793973">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="splash1" pingpong="0" repeatcount="1" repeatto="0" sid="759716366253170" speed="2">
-                    <frame duration="5" hotspotX="0" hotspotY="0" original-source="D:\assets\cena1-01.png">
-                        <collision-poly>
-                            <point x="0.00277778" y="0.0015625" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="5" hotspotX="0" hotspotY="0" original-source="D:\assets\cena2-01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Splash_Layout.xml</layout>
         <layout>Home_layout.xml</layout>
+        <layout>Splash_Layout.xml</layout>
         <layout>Game.xml</layout>
         <layout>Credit_Layout.xml</layout>
         <layout>Settings_Layout.xml</layout>
@@ -887,14 +877,14 @@
         <event-sheet>Settigns_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="37" />
-        <global-instance type="Touch" uid="38">
+        <global-instance type="Keyboard" uid="33" />
+        <global-instance type="Touch" uid="34">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Mouse" uid="39" />
-        <global-instance type="Audio" uid="40">
+        <global-instance type="Mouse" uid="35" />
+        <global-instance type="Audio" uid="36">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -908,8 +898,12 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="SoundFx" uid="41" />
-        <global-instance type="LocalStorage" uid="42" />
+<<<<<<< HEAD
+        <global-instance type="SoundFx" uid="30" />
+=======
+        <global-instance type="SoundFx" uid="37" />
+        <global-instance type="LocalStorage" uid="38" />
+>>>>>>> cd7171e011c3c0731edf77f8fb2ea2ecd3aa0641
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />

@@ -32,7 +32,7 @@
                         <action id="24" name="Play at position" sid="373699962598196" type="Audio">
                             <param id="0" name="Audio file">Der_Hoelle_Rache</param>
                             <param id="1" name="Loop">1</param>
-                            <param id="2" name="Volume">-15</param>
+                            <param id="2" name="Volume">0</param>
                             <param id="3" name="X">Player.X</param>
                             <param id="4" name="Y">Player.Y</param>
                             <param id="5" name="Angle">0</param>
