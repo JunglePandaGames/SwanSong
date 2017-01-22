@@ -11,6 +11,7 @@
     <saved-with-version>24200</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="LocalStorage" version="1">Local storage</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -403,6 +404,29 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LocalStorage" sid="612324217597892">
+            <plugin id="LocalStorage" />
+        </object-type>
+        <object-type name="HighScore" sid="240455950360569">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="457137582210137" speed="5">
+                    <frame duration="1" hotspotX="0.487374" hotspotY="0.458333" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\high.png">
+                        <collision-poly>
+                            <point x="0.0151515" y="0.0625" />
+                            <point x="0.5" y="0.0625" />
+                            <point x="0.972222" y="0.166667" />
+                            <point x="0.866162" y="0.958333" />
+                            <point x="0.133838" y="0.958333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FontHighScore" sid="361105179243197">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\numeros2-01.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -431,6 +455,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="LocalStorage" uid="4" />
     </global-instances>
     <sounds-folder>
         <file name="som_botão_pressionado.ogg" />

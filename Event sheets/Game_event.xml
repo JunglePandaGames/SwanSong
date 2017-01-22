@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game_event</name>
     <events>
+        <variable constant="0" name="HighScore" sid="794937791679057" static="0" type="number">0</variable>
         <variable constant="0" name="Score" sid="703018531519220" static="0" type="number">0</variable>
         <variable constant="0" name="Life" sid="186956783734137" static="0" type="number">3</variable>
         <variable constant="0" name="Yell_value" sid="174172088473082" static="0" type="number">3</variable>
@@ -22,6 +23,34 @@
                         </action>
                         <action id="5" name="Set frame" sid="317700041611816" type="Life3">
                             <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="177377856604119" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="583330710367245">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="727098155954145" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="516420801559177" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="518040493542457">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="544635370502993" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="106453289802675" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
                         </action>
                     </actions>
                 </event-block>
@@ -204,30 +233,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="858982714300267">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="871330369802185" type="System">
-                            <param id="0" name="Variable">Life</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action disabled="1" id="-21" name="Reset global variables" sid="939399666574974" type="System" />
-                        <action id="-9" name="Destroy" sid="186880638351059" type="Life1" />
-                        <action id="-9" name="Destroy" sid="876757431981048" type="Life2" />
-                        <action id="-9" name="Destroy" sid="289495611784502" type="Life3" />
-                        <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
-                        <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
-                            <param id="0" name="X">546</param>
-                            <param id="1" name="Y">490</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="724947865041060" title="Platéia">
@@ -406,5 +411,63 @@
                 <action id="-26" name="Restart layout" sid="810083997634869" type="System" />
             </actions>
         </event-block>
+        <event-group description="" sid="907240356141706" title="Game Over">
+            <sub-events>
+                <event-block sid="821824112341137">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="287995756974584" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">Score</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="888340466606334" type="System">
+                            <param id="0" name="Variable">HighScore</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                        <action id="0" name="Set item" sid="962828127218619" type="LocalStorage">
+                            <param id="0" name="Key">&quot;highscore_key&quot;</param>
+                            <param id="1" name="Value">Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="858982714300267">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="871330369802185" type="System">
+                            <param id="0" name="Variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-21" name="Reset global variables" sid="939399666574974" type="System" />
+                        <action id="-9" name="Destroy" sid="186880638351059" type="Life1" />
+                        <action id="-9" name="Destroy" sid="876757431981048" type="Life2" />
+                        <action id="-9" name="Destroy" sid="289495611784502" type="Life3" />
+                        <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
+                        <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
+                            <param id="0" name="X">546</param>
+                            <param id="1" name="Y">490</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="218583520102059" type="HighScore">
+                            <param id="0" name="X">374</param>
+                            <param id="1" name="Y">1055</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="767848152645103" type="FontHighScore">
+                            <param id="0" name="X">593</param>
+                            <param id="1" name="Y">1031</param>
+                        </action>
+                        <action id="0" name="Set text" sid="478286552598505" type="FontHighScore">
+                            <param id="0" name="Text">HighScore</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
