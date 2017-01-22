@@ -220,7 +220,7 @@
                         <action id="-9" name="Destroy" sid="912052839243697" type="Player" />
                         <action id="-3" name="Set position" sid="532508664760965" type="GameOverAnimation">
                             <param id="0" name="X">546</param>
-                            <param id="1" name="Y">572</param>
+                            <param id="1" name="Y">490</param>
                         </action>
                         <action id="4" name="Set animation" sid="371069945423234" type="GameOverAnimation">
                             <param id="0" name="Animation">&quot;Default&quot;</param>
