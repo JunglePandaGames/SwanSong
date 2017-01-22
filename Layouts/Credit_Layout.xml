@@ -134,6 +134,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TxtCreditSource" uid="32">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>540.422241211</x>
+                        <y>1576.739257813</y>
+                        <z>0</z>
+                        <width>896</width>
+                        <height>285</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501587331</hotspotX>
+                        <hotspotY>0.504347801</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

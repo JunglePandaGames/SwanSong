@@ -17,6 +17,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -662,6 +663,29 @@
                 </animation>
                 <animation framecount="1" loop="0" name="off" pingpong="0" repeatcount="1" repeatto="0" sid="781999532374334" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="125161280147540">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Text2" sid="306083546089586">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TxtCreditSource" sid="434509115650147">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153321563816377" speed="5">
+                    <frame duration="1" hotspotX="0.501587" hotspotY="0.504348" original-source="D:\1234.png">
+                        <collision-poly>
+                            <point x="0.00634921" y="0.0173913" />
+                            <point x="0.498413" y="0.165217" />
+                            <point x="0.793651" y="0.565217" />
+                            <point x="0.853968" y="0.6" />
+                            <point x="0.498413" y="0.86087" />
+                            <point x="0.015873" y="0.956522" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
