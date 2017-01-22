@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BgCreditSettins" uid="2">
+                <instance type="BgCreditSettins" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -80,19 +80,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>986</x>
+                        <x>542.269287109</x>
                         <y>1835</y>
                         <z>0</z>
-                        <width>186</width>
-                        <height>170</height>
+                        <width>169.439208984</width>
+                        <height>154.863800049</height>
                         <depth>0</depth>
-                        <hotspotX>0.512499988</hotspotX>
-                        <hotspotY>0.512499988</hotspotY>
+                        <hotspotX>0.513392866</hotspotX>
+                        <hotspotY>0.513392866</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TxtCredit" uid="15">
+                <instance type="TxtCredit" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -122,14 +122,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>551</x>
-                        <y>1073</y>
+                        <x>541</x>
+                        <y>1060.992675781</y>
                         <z>0</z>
-                        <width>814</width>
-                        <height>1383</height>
+                        <width>1016</width>
+                        <height>1374</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.500361562</hotspotY>
+                        <hotspotY>0.500722528</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -153,7 +153,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Transition" uid="16">
+                <instance type="Transition" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TiledBackground" uid="14">
+                <instance type="TiledBackground" uid="2">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -120,7 +120,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Wave" uid="11">
+                <instance type="Wave" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -169,7 +169,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Glass" uid="12">
+                <instance type="Glass" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -212,7 +212,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bottle" uid="13">
+                <instance type="Bottle" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

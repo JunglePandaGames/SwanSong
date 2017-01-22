@@ -14,8 +14,8 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
-		<plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
@@ -218,12 +218,12 @@
                 <behavior-type name="Solid" sid="920753338782170">
                     <behavior id="solid" />
                 </behavior-type>
- 				<behavior-type name="Flash" sid="341874191244922">
+                <behavior-type name="Flash" sid="341874191244922">
                     <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                 <animation framecount="1" loop="0" name="center" pingpong="0" repeatcount="1" repeatto="0" sid="163973605076451" speed="5">
+                <animation framecount="1" loop="0" name="center" pingpong="0" repeatcount="1" repeatto="0" sid="163973605076451" speed="5">
                     <frame duration="1" hotspotX="0.521951" hotspotY="0.348901" original-source="C:\Users\Eberth Felipe\Documents\UEA - Games\GGJ - 2017\cantora.png">
                         <collision-poly>
                             <point x="0.263415" y="0.148352" />
@@ -360,7 +360,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="574646743127753" speed="5">
-                    <frame duration="1" hotspotX="0.5125" hotspotY="0.5125" original-source="C:\Users\Gleides\Pictures\Assets_Games\onscreencontrols\Sprites\transparentDark\transparentDark43.png">
+                    <frame duration="1" hotspotX="0.513393" hotspotY="0.513393" original-source="C:\Users\Gleides\Pictures\Assets_Games\Assets\Botoes4.png">
                         <collision-poly>
                             <point x="0.15" y="0.15" />
                             <point x="0.5" y="0" />
@@ -390,7 +390,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="929970371042621" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500362" original-source="C:\Workspace\SwanSong\Assets\creditos.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500723" original-source="C:\Users\Gleides\Pictures\Assets_Games\Assets\creditos.png">
                         <collision-poly>
                             <point x="0.464373" y="0.273319" />
                             <point x="0.5" y="0.000723066" />
@@ -411,7 +411,7 @@
                 </animation>
             </animation-folder>
         </object-type>
- 		<object-type name="Wave" sid="466471745578565">
+        <object-type name="Wave" sid="466471745578565">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="635543122203265">
@@ -639,6 +639,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TitleSettings" sid="844740580467120">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760554565410913" speed="5">
+                    <frame duration="1" hotspotX="0.500873" hotspotY="0.501217" original-source="C:\Users\Gleides\Pictures\Assets_Games\Assets\config.png">
+                        <collision-poly>
+                            <point x="0.061082" y="0.0851582" />
+                            <point x="0.499127" y="0.0340633" />
+                            <point x="0.975567" y="0.0340633" />
+                            <point x="0.239092" y="0.498783" />
+                            <point x="0.382199" y="0.138686" />
+                            <point x="0.499127" y="0.136253" />
+                            <point x="0.0122164" y="0.982968" />
+                            <point x="0.008726" y="0.498783" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -655,14 +674,14 @@
         <event-sheet>Credit_Event.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="3" />
-        <global-instance type="Touch" uid="5">
+        <global-instance type="Keyboard" uid="24" />
+        <global-instance type="Touch" uid="25">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Mouse" uid="6" />
-        <global-instance type="Audio" uid="7">
+        <global-instance type="Mouse" uid="26" />
+        <global-instance type="Audio" uid="27">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
